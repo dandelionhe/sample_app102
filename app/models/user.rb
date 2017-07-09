@@ -1,7 +1,8 @@
 class User < ApplicationRecord
   attr_accessor :remember_token
-  validates :name, presence:true,length:{maximum:20}
-  validates :email,presence:true,length:{maximum:50}
+  validates :name, presence:true,length:{maximum:200}
+  validates :email,presence:true,length:{maximum:500}
+  validates :password,presence:true,allow_blank:true
   has_secure_password
 
   class << self
