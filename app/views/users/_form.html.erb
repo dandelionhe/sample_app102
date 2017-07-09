@@ -1,0 +1,8 @@
+  <%= simple_form_for @user, defaults: { input_html: { class: 'default_class' } } do |f| %>
+  <%= f.input :name %>
+  <%= f.input :email %>
+  <%= f.input :password, input_html: { maxlength: 20 } %>
+  <%= f.input :password_confirmation %>
+  
+  <%= f.button :submit,class: "btn btn-primary", data: { disable_with: "Submitting..." }  %>
+  <% end %>
